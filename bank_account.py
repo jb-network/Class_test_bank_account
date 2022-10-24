@@ -4,22 +4,19 @@ from os import system
 class Person:
     def __init__(self, first_name, last_name):
         self.first_name = first_name
-        self.last_name = last_name
+        self.last_name = last_name        
         
-
 class Customer (Person):
     def __init__(self, account_number, balance):
         self.account_number = account_number
         self.balance = balance
     def __str__(self):
         return (f"Account Owner: {self.first_name} {self.last_name} Account Number: {self.account_number}  Account Balance: {self.balance}")
-
     def Deposit(self):
         amount_deposit = input("How much would you like to deposit: ")
         self.balance += amount_deposit
         print(f" {amount_deposit} successfully added to your account")
         print(f" Your current balance is: {self.balance}")
-
     def Withdraw(self):
         amount_withdraw = input("How much would you like to withdraw: ")
         while True:
@@ -71,3 +68,4 @@ def banking_loop():
 
 # MAIN
 banking_loop()
+# Currently scripting and debugging
